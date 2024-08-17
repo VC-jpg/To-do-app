@@ -1,0 +1,32 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "electron-packager . my-electron-app --platform=win32 --arch=x64 --out=dist",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^25.9.8",
+    "electron-builder": "^24.5.0",
+    "electron-packager": "^15.5.2"
+  },
+    "build": {
+      "appId": "com.example.myapp",
+      "productName": "MyApp",
+      "files": [
+        "*.js",
+        "*.html",
+        "assets/**/*",
+        "tasks.json"
+      ],
+      "directories": {
+        "output": "dist"
+      },
+      "win": {
+        "target": "nsis"
+      }
+    }
+  }
+  
